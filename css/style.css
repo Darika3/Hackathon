@@ -127,7 +127,11 @@ h2 {
 }
 
 .buyBtn {
+<<<<<<< HEAD
   background-color: white;
+=======
+  background-color:white;
+>>>>>>> 282ec1841d6e463c5ba8909280626e3b796122d2
   width: 9.4rem;
   height: 3rem;
   border: none;

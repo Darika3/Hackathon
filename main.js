@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 let form = document.querySelector(".inputs")
 let inpImg = document.querySelector("#inpImage");
 let inpTrailer = document.querySelector("#inpTrailer")
@@ -85,3 +86,11 @@ async function readProfile(search = "") {
   
   readProfile();
   
+=======
+let inputAdd = document.querySelector(".inputs")
+let inpImage = document.querySelector("#inpImage");
+let inpName = document.querySelector("#inpName");
+let inpDesc = document.querySelector("#inpDesc");
+let btnAdd = document.querySelector("#btnAdd");
+
+>>>>>>> 282ec1841d6e463c5ba8909280626e3b796122d2
