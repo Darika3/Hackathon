@@ -72,43 +72,73 @@ body {
   color: #101b37;
 }
 
+/* ! start modal */
 #modal {
+<<<<<<< HEAD
   display: block;
   width: 1000px;
   height: 400px;
   max-width: 70%;
   margin: 25px auto;
   border: 1px solid #998e78;
+=======
+  display: flex;
+  width: 40rem;
+  height: 25rem;
+  /* max-width: 70%; */
+  /* margin: 25px auto; */
+  border: 2px solid white;
+>>>>>>> 55b4135a3b2fe37ce7d4d96a995b3e0b64ce526f
   position: fixed;
-  top: 10%;
-  left: 15%;
-  background-color: #fff;
+  top: 5%;
+  left: 25%;
+  background-color: #0b1223;
+  border-radius: 5px;
 }
-.btnEdit {
-  width: 40%;
-  height: 5%;
-  border: 2px solid black;
+
+#modalLeft {
+  width: 70%;
+  height: 100%;
 }
-.formEdit {
-  /* display: flex; */
-  margin: auto;
-  /* width: 100%; */
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-}
-#closeEditModal {
-  height: 5%;
-  width: 5%;
-}
-.editModal {
+
+#modalRight {
   display: flex;
   flex-direction: column;
-  width: 30%;
-  height: 40%;
+  padding: 20px 20px;
+  margin-top: 30px;
 }
-.editInps {
-  width: 300px;
-  margin-top: 5%;
-  margin-bottom: 5%;
+
+#modalRight h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
 }
+
+#modalRight p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+#btns {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.buyBtn:hover {
+  background-color: rgb(141, 36, 36);
+  color: white;
+  /* border: 2px solid rgb(141, 36, 36); */
+  transition: 0.3s;
+}
+
+.buyBtn {
+  background-color:white;
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  color: rgb(141, 36, 36);
+  margin: 50px auto;
+  border: 2px solid rgb(255, 255, 255);
+}
+
