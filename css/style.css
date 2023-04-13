@@ -4,7 +4,7 @@ body {
   max-height: 100vh;
   background-color: #101b37;
 }
-* {
+h2 {
   color: white;
 }
 
@@ -24,6 +24,7 @@ body {
   border: none;
   background: white;
   position: relative;
+  margin-bottom: 2em;
 }
 .grad:hover:before {
   content: "";
@@ -38,6 +39,7 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .inputs {
   margin-bottom: 5%;
   display: flex;
@@ -55,7 +57,7 @@ body {
   border: 2px solid;
 }
 .inputs input {
-  width: 20rem;
+  width: 15rem;
   height: 3rem;
   border-radius: 10px;
   color: #101b37;
@@ -71,7 +73,17 @@ body {
 .card-text {
   color: #101b37;
 }
-
+#inpCategory {
+  width: 15rem;
+  height: 3rem;
+  border-radius: 10px;
+  color: #101b37;
+  text-align: center;
+}
+#inpCategory option {
+  color: #101b37;
+  text-align: center;
+}
 /* ? start modal */
 #modal {
   display: none;
@@ -117,7 +129,7 @@ body {
 }
 
 .buyBtn {
-  background-color:white;
+  background-color: white;
   width: 9.4rem;
   height: 3rem;
   border: none;
