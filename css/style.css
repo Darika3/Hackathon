@@ -4,7 +4,7 @@ body {
   max-height: 100vh;
   background-color: #101b37;
 }
-* {
+h2 {
   color: white;
 }
 
@@ -55,7 +55,7 @@ body {
   border: 2px solid;
 }
 .inputs input {
-  width: 20rem;
+  width: 15rem;
   height: 3rem;
   border-radius: 10px;
   color: #101b37;
@@ -71,10 +71,20 @@ body {
 .card-text {
   color: #101b37;
 }
-
+#inpCategory{
+  width: 15rem;
+  height: 3rem;
+  border-radius: 10px;
+  color: #101b37;
+  text-align: center;
+}
+#inpCategory option{
+  color: #101b37;
+  text-align: center;
+}
 /* ? start modal */
 #modal {
-  display: flex;
+  display: none;
   width: 40rem;
   height: 25rem;
   /* max-width: 70%; */
@@ -131,7 +141,7 @@ body {
 /* ?Modal Edit  */
 
 #modalEdit {
-  display: flex;
+  display: none;
   left: 35%;
   flex-direction: column;
   width: 20rem;

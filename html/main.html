@@ -113,19 +113,28 @@
         <input placeholder="Image" type="url" id="inpImage" />
         <input placeholder="Title" type="text" id="inpName" />
         <input placeholder="Description" type="text" id="inpDesc" />
+        <select id="inpCategory" name="select" class="inpCategory"
+          >
+            <!--Supplement an id here instead of using 'name'-->
+            <option value="value1" selected>Возраст</option>
+            <option value="value2">12+</option>
+            <option value="value2">16+</option>
+            <option value="value3">18+</option>
+          </select>
         <button id="btnAdd">ADD</button>
       </div>
       <div id="cards">
         <div class="grad">
-          <div class="card" style="width: 20rem; height: 43rem">
+          <div class="card" style="width: 20rem; height: 46rem">
             <img
-              style="height: 500px; width: 100%"
+              style="height: 31.25em; width: 100%"
               src="https://wallpapercave.com/wp/wp10415289.jpg"
               class="card-img-top"
               alt="..."
             />
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
+              <p>12+</p>
               <p class="card-text">
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
