@@ -4,7 +4,7 @@ body {
   max-height: 100vh;
   background-color: #101b37;
 }
-* {
+h2 {
   color: white;
 }
 
@@ -71,7 +71,17 @@ body {
 .card-text {
   color: #101b37;
 }
-
+#inpCategory{
+  width: 15rem;
+  height: 3rem;
+  border-radius: 10px;
+  color: #101b37;
+  text-align: center;
+}
+#inpCategory option{
+  color: #101b37;
+  text-align: center;
+}
 /* ? start modal */
 #modal {
   display: none;
