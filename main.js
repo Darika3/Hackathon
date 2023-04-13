@@ -8,7 +8,7 @@ let API = "http://localhost:8000/movies";
 let cardsContainer = document.querySelector("#cards");
 let currentPage = 1;
 let pageLength = 1;
-let filterValue="Все";
+// let filterValue="Все";
 
 
 // Навешиваем событие submit на тег Form, для того, чтобы собрать значения инпутов в один объект и отрпавить их в db.json
@@ -82,7 +82,7 @@ async function readCard(search = "") {
                 background-color: rgb(141, 36, 36);
                 border: none;
                 border-radius: 5px;
-                width: 40%;" onclick="deleteProfile(${elem.id}) class="btn">Delete</button>
+                width: 40%;" onclick="deleteCard(${elem.id}) class="btn">Delete</button>
               </div>
             </div>      
           </div>

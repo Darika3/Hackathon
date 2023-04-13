@@ -120,30 +120,34 @@
           <option value="value3">18+</option>
         </select>
         <button id="btnAdd">ADD</button>
-      </form>
-      <!-- ! START CARD -->
+      </div>
+      <div class="filter_btns block">
+        <button class="filter_btn">12+</button>
+        <button class="filter_btn">16+</button>
+        <button class="filter_btn">18+</button>
+        <button class="filter_btn">Все</button>
+      </div>
       <section>
-        <div id="cards">
-          <!-- <div class="grad">
-            <div class="card" style="width: 20rem; height: 46rem">
-              <img
-                style="height: 31.25em; width: 100%"
-                src="https://wallpapercave.com/wp/wp10415289.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p>12+</p>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                 <button onclick="showModalEdit(${elem.id}) class="btn btn-primary">Edit</button>
-                <button onclick="deleteProfile(${elem.id}) class="btn btn-primary">Delete</button>
-              </div>
+      <div id="cards" class="block">
+        <!-- <div class="grad">
+          <div class="card" style="width: 20rem; height: 46rem">
+            <img
+              style="height: 31.25em; width: 100%"
+              src="https://wallpapercave.com/wp/wp10415289.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p>12+</p>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <button class="btn btn-primary">Edit</button>
+                <button class="btn btn-primary">Delete</button>
             </div>
-          </div> -->
+          </div>  -->
         </div>
       </section>
     </div>
@@ -173,6 +177,7 @@
       <div id="modal-r">
         <div id="modalRight">
           <h2>Name Surname</h2>
+          <p>12+</p>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. A similique
             debitis ut error tempore dignissimos, odio quas sunt fugiat harum
@@ -188,7 +193,7 @@
     <!-- ?  Start Edit modal -->
     <div id="modalEdit">
       <form id="editForm" class="formEdit">
-        <h1 style="text-align: center">Edit</h1>
+        <h1 style="text-align: center; color: white;">Edit</h1>
         <input
           type="url"
           placeholder="Image"
@@ -207,6 +212,12 @@
           class="editInps"
           id="editInpNumber"
         />
+        <select name="select" class="editInps">
+          <option value="value1" selected>Возраст</option>
+          <option value="value2">12+</option>
+          <option value="value2">16+</option>
+          <option value="value3">18+</option>
+        </select>
         <input
           type="text"
           placeholder="Description"
