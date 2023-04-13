@@ -24,6 +24,7 @@ h2 {
   border: none;
   background: white;
   position: relative;
+  margin-bottom: 2em;
 }
 .grad:hover:before {
   content: "";
@@ -38,6 +39,7 @@ h2 {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .inputs {
   margin-bottom: 5%;
   display: flex;
@@ -71,14 +73,14 @@ h2 {
 .card-text {
   color: #101b37;
 }
-#inpCategory{
+#inpCategory {
   width: 15rem;
   height: 3rem;
   border-radius: 10px;
   color: #101b37;
   text-align: center;
 }
-#inpCategory option{
+#inpCategory option {
   color: #101b37;
   text-align: center;
 }
@@ -127,11 +129,7 @@ h2 {
 }
 
 .buyBtn {
-<<<<<<< HEAD
   background-color: white;
-=======
-  background-color:white;
->>>>>>> 282ec1841d6e463c5ba8909280626e3b796122d2
   width: 9.4rem;
   height: 3rem;
   border: none;

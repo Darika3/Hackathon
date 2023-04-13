@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 let form = document.querySelector(".inputs")
 let inpImg = document.querySelector("#inpImage");
 let inpTrailer = document.querySelector("#inpTrailer")
@@ -6,7 +5,7 @@ let inpName = document.querySelector("#inpName");
 let inpDesc = document.querySelector("#inpDesc");
 let btnAdd = document.querySelector("#btnAdd");
 let API = "http://localhost:8000/movies";
-let cardsContainer = document.querySelector(".cards");
+let cardsContainer = document.querySelector("#cards");
 let currentPage = 1;
 let pageLength = 1;
 let filterValue="Все";
@@ -32,7 +31,7 @@ form.addEventListener("submit", (e) => {
     image: inpImg.value,
     description: inpDesc.value
   };
-  createProfile(newCard);
+  createCard(newCard);
 });
 
 // !Create - добавление новых данных
@@ -44,7 +43,7 @@ async function createCard(objProf) {
       },
       body: JSON.stringify(objProf),
     });
-    readProfile();
+    readCard();
   
     let inputs = document.querySelectorAll("form input");
     inputs.forEach((elem) => {
@@ -53,8 +52,9 @@ async function createCard(objProf) {
   }
   
 // !Read - отображение данных
-async function readProfile(search = "") {
-    let res = filterValue !== "Все"? await fetch(`${API}?q=${search}&_page=${currentPage}&_limit=3&category=${filterValue}`): await fetch(`${API}?q=${search}&_page=${currentPage}&_limit=3`);
+async function readCard(search = "") {
+    // let res = filterValue !== "Все"? await fetch(`${API}?q=${search}&_page=${currentPage}&_limit=3&category=${filterValue}`): await fetch(`${API}`);
+    let res = await fetch(API)
     let data = await res.json();
     cardsContainer.innerHTML = "";
     data.forEach((elem) => {
@@ -62,7 +62,7 @@ async function readProfile(search = "") {
       <div class="grad">
             <div class="card" style="width: 20rem; height: 43rem">
               <img
-                style="height: 500px; width: 100%"
+                style="height: 31em; width: 100%"
                 src="${elem.image}"
                 class="card-img-top"
                 alt="..."
@@ -73,24 +73,33 @@ async function readProfile(search = "") {
                 <p class="card-text">
                 ${elem.description}
                 </p>
-                <button onclick="showModalEdit(${elem.id}) class="btn btn-primary">Edit</button>
-                <button onclick="deleteProfile(${elem.id}) class="btn btn-primary">Delete</button>
+                <button style="color: white;
+                background-color: rgb(141, 36, 36);
+                border: none;
+                border-radius: 5px;
+                width: 40%;" onclick="showModalEdit(${elem.id}) class="btn">Edit</button>
+                <button style="color: white;
+                background-color: rgb(141, 36, 36);
+                border: none;
+                border-radius: 5px;
+                width: 40%;" onclick="deleteProfile(${elem.id}) class="btn">Delete</button>
               </div>
             </div>      
           </div>
       `;
   
     });
-    countPages();
+    // countPages();
   }
   
-  readProfile();
+  readCard();
   
-=======
-let inputAdd = document.querySelector(".inputs")
-let inpImage = document.querySelector("#inpImage");
-let inpName = document.querySelector("#inpName");
-let inpDesc = document.querySelector("#inpDesc");
-let btnAdd = document.querySelector("#btnAdd");
 
->>>>>>> 282ec1841d6e463c5ba8909280626e3b796122d2
+// Delete - удаление одного элемента по id
+
+async function deleteCard(id) {
+    await fetch(`${API}/${id}`, {
+      method: "DELETE",
+    });
+    readCard();
+  }
