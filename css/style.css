@@ -97,7 +97,6 @@ h2 {
   border-radius: 5px;
 }
 
-
 #modalLeft {
   width: 70%;
   height: 100%;
@@ -151,7 +150,6 @@ h2 {
   top: 15%;
   background-color: #0b1223;
   border-radius: 5px;
-
 }
 .formEdit {
   display: flex;
@@ -168,22 +166,21 @@ h2 {
   text-align: center;
   color: black;
 }
-.editInps::placeholder{
+.editInps::placeholder {
   text-align: center;
-
 }
-#editForm button{
+#editForm button {
   border-radius: 5px;
   margin: 0.5rem auto;
   border: none;
 }
-#saveEditModal{
+#saveEditModal {
   background-color: rgb(141, 36, 36);
   color: white;
   height: 2rem;
   border: 1px solid #fff;
 }
-#closeEditModal{
+#closeEditModal {
   color: #0b1223;
 }
 /* ?end edit modal */
