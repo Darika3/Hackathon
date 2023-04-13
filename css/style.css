@@ -84,6 +84,26 @@ h2 {
   color: #101b37;
   text-align: center;
 }
+
+/* start style filter buttons */
+
+.filter_btns {
+  margin: 1em auto 3em;
+}
+.filter_btn {
+  width: 10rem;
+  height: 3rem;
+  border-radius: 10px;
+  background-color: white;
+  border: 2px solid;
+  transition: 0.3s;
+}
+.filter_btn:hover {
+  background-color: #101b37;
+  color: white;
+}
+/* end style filter buttons */
+
 /* ? start modal */
 #modal {
   display: none;
@@ -113,12 +133,13 @@ h2 {
 
 #modalRight h2 {
   font-size: 1.8em;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 #modalRight p {
-  margin-bottom: 1.25em;
+  margin-bottom: 1em;
   font-size: 1em;
+  color: #fff;
 }
 
 .buyBtn:hover {
@@ -135,14 +156,14 @@ h2 {
   border: none;
   border-radius: 10px;
   color: rgb(141, 36, 36);
-  margin: 3.2rem auto;
+  margin: 1.5rem auto;
   border: 2px solid rgb(255, 255, 255);
 }
 /* ? end modal */
 /* ?Modal Edit  */
 
 #modalEdit {
-  display: none;
+  display: flex;
   left: 35%;
   flex-direction: column;
   width: 20rem;
