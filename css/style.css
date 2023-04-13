@@ -15,17 +15,100 @@ body {
 
 .main {
   margin-top: 3rem;
-
   display: flex;
   flex-direction: column;
+  /* flex-wrap: wrap; */
+}
+.grad {
+  border-radius: 5px;
+  border: none;
+  background: white;
+  position: relative;
+}
+.grad:hover:before {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  background: inherit;
+  filter: blur(20px);
+  transform: translate3d(15px, 15px, -1px);
 }
 #cards {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
+.inputs {
+  margin-bottom: 5%;
+  display: flex;
+  justify-content: space-around;
+}
+.inputs button {
+  width: 10rem;
+  color: #fff;
+  background-color: rgb(141, 36, 36);
+  border-radius: 5px;
+  border: none;
+}
+.inputs button:hover {
+  font-size: smaller;
+  border: 2px solid;
+}
+.inputs input {
+  width: 20rem;
+  height: 3rem;
+  border-radius: 10px;
+  color: #101b37;
+  text-align: center;
+}
+.inputs input::placeholder {
+  text-align: center;
+}
+.inputs input:hover::placeholder {
+  transition: 2000;
+  font-size: larger;
+}
 .card-text {
   color: #101b37;
+}
+
+#modal {
+  display: block;
+  width: 36rem;
+  height: 400px;
+  max-width: 70%;
+  margin: 25px auto;
+  border: 1px solid #998e78;
+  position: fixed;
+  top: 10%;
+  left: 15%;
+  background-color: #fff;
+}
+.btnEdit {
+  width: 40%;
+  height: 5%;
+  border: 2px solid black;
+}
+.formEdit {
+  /* display: flex; */
+  margin: auto;
+  /* width: 100%; */
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+#closeEditModal {
+  height: 5%;
+  width: 5%;
+}
+.editModal {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 40%;
+}
+.editInps {
+  width: 300px;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
