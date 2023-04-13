@@ -3,7 +3,7 @@
     {
       "title": "Spider-Man: No Way Home",
       "image": "https://wallpapercave.com/wp/wp10415289.jpg",
-      "description": "Spider-Man: No Way Home is a 2021 American superhero film based on the Marvel Comics character",
+      "description": "Spider-Man: No Way Home is a 2021 American superhero film based on the Marvel",
       "trailer": "https://youtu.be/JfVOs4VSpmA",
       "category": "12+",
       "id": 1
@@ -71,6 +71,38 @@
       "trailer": "https://youtu.be/8YjFbMbfXaQ",
       "category": "18+",
       "id": 9
+    },
+    {
+      "title": "Darika",
+      "image": "https://wallpapercave.com/wp/wp10239965.jpg",
+      "description": "wertyvgcccccccccccccccccghhhhhhhhhhhh",
+      "trailer": "https://youtu.be/8YjFbMbfXaQ",
+      "category": "18+",
+      "id": 10
+    },
+    {
+      "title": "Darika",
+      "image": "https://wallpapercave.com/wp/wp10239965.jpg",
+      "description": "wertyvgcccccccccccccccccghhhhhhhhhhhh",
+      "trailer": "https://youtu.be/8YjFbMbfXaQ",
+      "category": "12+",
+      "id": 11
+    },
+    {
+      "title": "Aidai",
+      "image": "https://wallpapercave.com/wp/wp10239965.jpg",
+      "description": "wertyvgcccccccccccccccccghhhhhhhhhhhh",
+      "trailer": "https://youtu.be/8YjFbMbfXaQ",
+      "category": "16+",
+      "id": 12
+    },
+    {
+      "title": "",
+      "image": "",
+      "description": "",
+      "trailer": "",
+      "category": "Возраст",
+      "id": 13
     }
   ]
 }

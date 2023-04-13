@@ -112,12 +112,12 @@
         <input type="url" placeholder="Trailer" id="inpTrailer" />
         <input placeholder="Title" type="text" id="inpName" />
         <input placeholder="Description" type="text" id="inpDesc" />
-        <select id="inpCategory" name="select" class="inpCategory">
+        <select name="select" id="inpCategory">
           <!--Supplement an id here instead of using 'name'-->
-          <option value="value1" selected>Возраст</option>
-          <option value="value2">12+</option>
-          <option value="value2">16+</option>
-          <option value="value3">18+</option>
+          <option selected>Возраст</option>
+          <option>12+</option>
+          <option>16+</option>
+          <option>18+</option>
         </select>
         <button id="btnAdd">ADD</button>
       </div>
@@ -127,6 +127,7 @@
         <button class="filter_btn">18+</button>
         <button class="filter_btn">Все</button>
       </div>
+      <!-- !START CARDS -->
       <section>
       <div id="cards" class="block">
         <!-- <div class="grad">
@@ -156,13 +157,6 @@
 
     <!-- ? Start modal -->
     <div id="modal">
-      <!-- <img
-        max-width="30rem"
-        min-width="30rem"
-        id="modalLeft"
-        src="../images/wp6617625-deadpool-4k-wallpapers.jpg"
-        alt="profPic"
-      /> -->
       <iframe
         width="70rem"
         height="20rem"
@@ -210,13 +204,13 @@
           type="text"
           placeholder="Title"
           class="editInps"
-          id="editInpNumber"
+          id="editInpTitle"
         />
-        <select name="select" class="editInps">
-          <option value="value1" selected>Возраст</option>
-          <option value="value2">12+</option>
-          <option value="value2">16+</option>
-          <option value="value3">18+</option>
+        <select id="editInpCategory" name="select" class="editInps">
+          <option selected>Возраст</option>
+          <option>12+</option>
+          <option>16+</option>
+          <option>18+</option>
         </select>
         <input
           type="text"
