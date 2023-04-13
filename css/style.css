@@ -55,7 +55,7 @@ body {
   border: 2px solid;
 }
 .inputs input {
-  width: 20rem;
+  width: 15rem;
   height: 3rem;
   border-radius: 10px;
   color: #101b37;
@@ -74,7 +74,7 @@ body {
 
 /* ? start modal */
 #modal {
-  display: flex;
+  display: none;
   width: 40rem;
   height: 25rem;
   /* max-width: 70%; */
