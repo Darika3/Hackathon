@@ -170,8 +170,9 @@ h2 {
   display: none;
   left: 35%;
   flex-direction: column;
+  align-items: center;
   width: 20rem;
-  height: 25rem;
+  height: 28rem;
   border: 2px solid white;
   position: fixed;
   top: 15%;

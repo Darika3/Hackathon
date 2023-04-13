@@ -90,19 +90,6 @@
       ></button>
     </div>
     <!-- END CAROUSEL -->
-    <!-- todo iframe video -->
-    <!-- <div>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/JfVOs4VSpmA"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></iframe>
-    </div> -->
-    <!-- todo====== -->
 
     <!-- main -->
     <div class="main block">
@@ -119,8 +106,8 @@
           <option>16+</option>
           <option>18+</option>
         </select>
-        <button id="btnAdd">ADD</button>
-      </div>
+        a<button id="btnAdd">ADD</button>
+      </form>
       <div class="filter_btns block">
         <button class="filter_btn">12+</button>
         <button class="filter_btn">16+</button>
@@ -129,8 +116,8 @@
       </div>
       <!-- !START CARDS -->
       <section>
-      <div id="cards" class="block">
-        <!-- <div class="grad">
+        <div id="cards" class="block">
+          <!-- <div class="grad">
           <div class="card" style="width: 20rem; height: 46rem">
             <img
               style="height: 31.25em; width: 100%"
@@ -161,7 +148,6 @@
         width="70rem"
         height="20rem"
         id="modalLeft"
-        src="https://www.youtube.com/embed/JfVOs4VSpmA"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -170,16 +156,16 @@
 
       <div id="modal-r">
         <div id="modalRight">
-          <h2>Name Surname</h2>
-          <p>12+</p>
-          <p>
+          <h2 id="detailsName">Name Surname</h2>
+          <p id="detailsCategory">12+</p>
+          <p id="detailsDescription">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. A similique
             debitis ut error tempore dignissimos, odio quas sunt fugiat harum
             libero in rerum recusandae, modi nesciunt, numquam provident.
             Eligendi, labore?
           </p>
 
-          <button class="buyBtn">Close</button>
+          <button class="detailsCloseBtn">Close</button>
         </div>
       </div>
     </div>
@@ -187,7 +173,7 @@
     <!-- ?  Start Edit modal -->
     <div id="modalEdit">
       <form id="editForm" class="formEdit">
-        <h1 style="text-align: center; color: white;">Edit</h1>
+        <h1 style="text-align: center; color: white">Edit</h1>
         <input
           type="url"
           placeholder="Image"
@@ -218,7 +204,7 @@
           class="editInps"
           id="editInpDesc"
         />
-        <button id="saveEditModal" type="submit">Save changes</button>
+        <button id="saveEditModal">Save changes</button>
         <button id="closeEditModal">Close modal</button>
       </form>
     </div>

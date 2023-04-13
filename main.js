@@ -1,4 +1,4 @@
-let form = document.querySelector("#inputs")
+let form = document.querySelector(".inputs")
 let inpImg = document.querySelector("#inpImage");
 let inpTrailer = document.querySelector("#inpTrailer")
 let inpName = document.querySelector("#inpName");
@@ -11,6 +11,7 @@ let cardsContainer = document.querySelector("#cards");
 // let pageLength = 1;
 // let filterValue="Все";
 
+console.log(form);
 
 // Навешиваем событие submit на тег Form, для того, чтобы собрать значения инпутов в один объект и отрпавить их в db.json
 
@@ -25,6 +26,7 @@ form.addEventListener("submit", (e) => {
       !inpCategory.value.trim()
     ) {
       alert("Заполните все поля!");
+      return;
     }
     //   Создаём новый объект и туда добавляем значения наших инпутов
   let newCard = {
@@ -49,10 +51,11 @@ async function createCard(objProf) {
     });
     readCard();
   inpCategory.value="Возраст";
-    let inputs = document.querySelectorAll(".inputs input");
-    inputs.forEach((elem) => {
-      elem.value = "";
-    });
+  inpName.value='';
+  inpImg.value='';
+  inpDesc.value='';
+  inpTrailer.value='';
+  
   }
   
 // !Read - отображение данных
@@ -66,6 +69,7 @@ async function readCard(search = "") {
       <div class="grad">
             <div class="card" style="width: 20rem; height: 43rem">
               <img
+              onclick="showDetailsModal(${elem.id})"
                 style="height: 450px; width: 100%"
                 src="${elem.image}"
                 class="card-img-top"
@@ -78,11 +82,11 @@ async function readCard(search = "") {
                 <p class="card-text">
                 ${elem.description}
                 </p>
-                <button  style="color: white;
+                <button onclick="showModalEdit(${elem.id})" style="color: white;
                 background-color: rgb(141, 36, 36);
                 border: none;
                 border-radius: 5px;
-                width: 40%;" onclick="showModalEdit(${elem.id})" class="btn">Edit</button>
+                width: 40%;" class="btn">Edit</button>
                 <button onclick="deleteCard(${elem.id})" style="color: white;
                 background-color: rgb(141, 36, 36);
                 border: none;
@@ -163,8 +167,40 @@ async function editCardFunc(editedCard, id) {
   } catch (error) {
     console.error(error);
   }
+  
 }
 
 closeBtn.addEventListener("click", () => {
   modal.style.display = "none";
 });
+
+
+btnAdd.addEventListener("click", ()=>{
+
+})
+// ! Details - детальное отображение данных
+let detailsModal= document.querySelector("#modal");
+var iframe = document.querySelector('iframe');
+var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+
+let detailsName= document.querySelector("#detailsName");
+let detailsCategory=document.querySelector("#detailsCategory");
+let detailsDesc=document.querySelector("#detailsDescription");
+let detailsCloseBtn=document.querySelector("#detailsCloseBtn");
+
+async function showDetailsModal(id) {
+    detailsModal.style.display = "flex";
+    let res = await fetch(`${API}/${id}`);
+    let data = await res.json();
+    console.log(data);
+    // console.log(detailsImage.src);
+    iframeDocument.innerHTML=data.trailer;
+    console.log(data.trailer);
+    detailsName.innerText=data.title;
+    detailsCategory.innerHTML=data.category;
+    detailsDesc.innerText=data.description;
+  }
+  
+//   detailsCloseBtn.addEventListener("click",()=>{
+//     detailsModal.style.display = "none";
+//   })
